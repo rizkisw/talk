@@ -32,6 +32,18 @@ footer h2{
 footer .copyright{
     font-size: small;
 }
+/* Animation */
+.animate__fadeInDown{
+        
+    animation-delay:0.5s;
+    animation-duration:3s;
+}
+
+.animate__backInLeft{
+  
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
 @media (min-width:1199.98px){
     .nav-link:hover{
         border-bottom: 3px solid #000;
@@ -76,4 +88,16 @@ footer .copyright{
     .text-center{
         margin-top: 100px;
     }
+    .animate__fadeInDown{
+        
+        animation-delay:0.5s;
+        animation-duration:3s;
+    }
+
+    .animate__backInLeft{
+      
+        animation-delay: 1s;
+        animation-duration: 3s;
+    }
+    
 }
