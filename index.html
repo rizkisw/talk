@@ -4,46 +4,55 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- animate Css -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- MY FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap" rel="stylesheet">
     <!-- MY CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     
 
     <title>Talk</title>
   </head>
   <body>
     <!--Navbar -->
+    <div class="animate__fadeInDown">
     <nav class="navbar navbar-expand-lg navbar-light .bg-transparent">
       <div class="container">
-        <a class="navbar-brand" href="#">Talk</a>
+        <a class="navbar-brand" href="{{ url('/') }}">Talk</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{ url('/home') }}">Home</a>
             <a class="nav-link" href="#">About</a>
             <a class="nav-link" href="#">Features</a>
             <a class="nav-link" href="#">News Update</a>
-            <a class="btn btn-dark tombol" href="#">Sign In</a>
+            <a class="btn btn-dark tombol" href="{{ route('login') }}">Sign In</a>
           </div>
         </div>
       </div>
     </nav>
+</div>
 
     <!-- Navbar End -->
     <!-- Hero -->
-    <div class="container-fluid">
+    <div class="animate__backInLeft">
+    <div class="container-fluid ">
       <div class="container">
         <img src="images\responsive.png" class="img-fluid" alt="responsive">
-        <h1 class="display-4">Wherever you are, you can<br> connect to everyone</h1>
+        <h1 class="display-4 animate__backInLeft">Wherever you are, you can<br> connect to everyone</h1>
         <p>Talk for everything</p>
-        <a class="btn btn-dark tombol" href="#">Sign Up For Free</a>
+        <a class="btn btn-dark tombol" href="{{ route('register') }}">Sign Up For Free</a>
+        </div>
       </div>
     </div>
     <!-- Hero End -->
@@ -51,7 +60,7 @@
     <!-- CONTAINER -->
     <div class="container">
       <!-- Feature Confrence -->
-      <div class="row Feature">
+      <div class="row Feature" data-aos="fade-left">
         <div class="col">
           <img src="images/videoconference-with-happy-people-desktop-flat-illustration_74855-14200.jpg" alt="confrence" class="img-fluid">
         </div>
@@ -61,7 +70,7 @@
         </div>
       </div>
       <!-- Feature Encrypcy -->
-      <div class="row Feature">
+      <div class="row Feature" data-aos="fade-left">
         <div class="col">
           <img src="images\enkripsi.jpg" alt="enkripsi" class="img-fluid">
         </div>
@@ -70,7 +79,8 @@
          <p>End-to-end encryption ensures only you and the person you're communicating with can read or listen to what is sent, and nobody in between</p> 
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-delay="300">
         <h2>Ready To Start</h2>
         <a class="btn btn-dark tombol" href="#">Sign Up For Free</a>
         <img src="images\people.png" alt="people" class="img-fluid">
@@ -82,7 +92,7 @@
     <footer class="bg-dark text-white ">
       <div class="container text-center text-md-left">
         
-        <div class="row text-center text-md-left">
+        <div class="row text-center text-md-left" >
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
             <h2>Talk</h2>
             <p>Talk for Everything</p>
@@ -158,7 +168,13 @@
 
 
     <!-- Optional JavaScript; choose one of the two! -->
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset:300,
+      duration:1000
+    });
+  </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
